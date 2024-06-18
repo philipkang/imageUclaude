@@ -10,9 +10,11 @@ import os
 #session = boto3.Session()
 ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
 SECRET_KEY = os.environ['AWS_SECRET_KEY']
+REGION_NAME = os.environ['AWS_REGION']
 session = boto3.Session(
     aws_access_key_id=ACCESS_KEY,
-    aws_secret_access_key=SECRET_KEY
+    aws_secret_access_key=SECRET_KEY,
+    region_name=REGION_NAME
 )
 
 bedrock = session.client(service_name='bedrock-runtime')
