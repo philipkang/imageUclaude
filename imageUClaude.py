@@ -56,7 +56,7 @@ if uploaded_file is not None:
     message_list.append(image_message)
 
     response = bedrock.converse(
-        modelId="anthropic.claude-3.5-sonnet-20240620-v1:0",
+        modelId="anthropic.claude-3-sonnet-20240229-v1:0",
         messages=message_list,
         inferenceConfig={
             "maxTokens": 2000,
